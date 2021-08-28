@@ -8,8 +8,14 @@ function Footer( {phone}) {
             Call us at { phone }<br></br>
                 for more information 
             </div>
-            <div>
-                ssssocials
+            <div className="contacts-social">
+                Social Share
+                <div>
+                    <img src="/img/social/twitter.png" />
+                    <img src="/img/social/facebook.png" />
+                    <img src="/img/social/linkedin.png" />
+                    <img src="/img/social/social1.png" />
+                </div>
             </div>
            </div>
        </footer>

@@ -1,10 +1,9 @@
-main {
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body {
     padding:0px;
     margin: 0px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -17,10 +16,107 @@ h4 {
     font-weight: normal;
     margin: 15px 0px;
 }
+nav{
+    background: white;
+    border-bottom: 20px solid #001254;
+
+    .navigation-bar
+    {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1024px;
+        margin: auto;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-self: flex-end;
+            flex-grow: 1;
+
+            li {
+                list-style-type: none;
+            }
+        }
+
+        &-logo {
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            h3,h2 {
+                margin: 0px;
+                padding-right: 20px;
+            }
+            h3 {
+                color: #009bfa;
+                border-right: 2px solid gray;
+            }
+            h2 {
+                color: #193989;
+                border-right: 2px solid gray;
+            }
+            img {
+                width: 100px;
+                position: relative;
+                top: 10px;
+                background: white;
+            }
+        }
+
+    }
+}
+
+.banner {
+    width: 1024px;
+    margin:auto;
+    z-index: 2;
+    color: white;
+
+    &-title {
+        align-self: flex-start;
+        margin-bottom: 20px;
+    }
+    
+    h1,h3 {
+        margin:0px;
+        padding:0px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 26px;
+        font-weight: normal;
+    }
+}
+
+.container.banner-container {
+    padding: 70px 15px;
+    background-image: url('/img/main.png');
+    background-position: right -154px;
+    position: relative;
+    background-size: 75%;
+
+    .gradient{
+        background: linear-gradient(125deg, #518abd 38%, transparent);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        z-index: 1;
+    }
+}
 
 .insights {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 
     &-block {
         padding: 15px;
@@ -29,16 +125,48 @@ h4 {
         box-shadow: 1px 1px 3px #d2d2d2;
         border-bottom: 5px solid #1450d2;
 
-        &-thumbnail img {
-            width: 100%;
-            height: 160px;
-            margin-bottom: 10px;
+        &-thumbnail {
+
+            position: relative;
+            
+            img {
+                width: 100%;
+                height: 200px;
+                margin-bottom: 10px;
+            }
+
+            &::after {
+                width: 0;
+                height: 0;
+                border-top: 30px solid white;
+                border-bottom: 30px solid transparent;
+                border-left: 30px solid #ffffff;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-right: 30px solid #ffffff00;
+                content: "";
+            }
+
+            &::before {
+                width: 0;
+                height: 0;
+                border-top: 30px solid transparent;
+                border-bottom: 30px solid #fff;
+                border-right: 30px solid #fff;
+                border-left: 30px solid transparent;
+                position: absolute;
+                bottom:  0;
+                right: 0;
+                content: "";
+
+            }
         }
 
         &-text {
             color: #1450d2;
             font-weight: bold;
-            font-size: 34px;
+            font-size: 24px;
         }
     }
     
@@ -62,12 +190,13 @@ h4 {
 
 .events {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     max-width: 1024px;
     margin: auto;
 
     &-block {
-        background-color: #1450d2;
+        background: linear-gradient(0deg, #07379e, #1450d2);
+        
         color: #fff;
         padding: 15px;
         width: 300px;
@@ -76,8 +205,21 @@ h4 {
         flex-direction: column;
         justify-content: space-between;
         align-items: baseline;
-        margin: 30px 0px;
-        
+        margin-top: 30px;
+        padding-bottom: 80px;
+
+        &::before {
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid #3b4e96;
+            border-left: 6px solid transparent;
+            position: absolute;
+            top: -12px;
+            left: 5px;
+            border-right: 6px solid #3b4e96;
+            content: "";
+        }
 
         &-date {
             background-color: #001254;
@@ -85,24 +227,47 @@ h4 {
             position: absolute;
             top: -15px;
             left: 15px;
-            padding: 15px;
-            width: 50px;
-            height: 50px;
+            padding: 5px;
+            width: 60px;
+            height: 60px;
             text-align: center;
-            font-size: 15px;
+            font-size: 15px;            
 
             h3 {
-                margin-top: 0px;
-                font-size: 25px;
+                margin: 0px;
+                font-size: 23px;
+                padding: 0px;
             }
         }
 
         &-address {
-            position: absolute;
-            bottom: -25px;
+            background: #ebebeb;
             color: #444;
             font-weight: bold;
-            right: 0px;
+            align-self: flex-end;
+            height: 40px;
+            margin: 0px;
+            width: 270px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 24px;
+
+            &::before {
+                width: 0;
+                height: 0;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid #ebebeb;
+                border-left: 20px solid transparent;
+                border-right: 20px solid #ebebeb;
+                content: "";
+                position: absolute;
+                left: -40px;
+                top: 0;
+            }
         }
 
         h2 {
@@ -123,11 +288,13 @@ h4 {
 
 button {
     border: 2px solid white;
-    padding: 10px;
+    padding: 10px 15px;
     background: none;
     color: #fff;
     transition: 100ms;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
 
     &:hover {
         background-color: #ffffff22;
@@ -139,7 +306,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 15px;
+    padding: 30px 15px;
     background-color: #ebebeb;
 
     &>h1, &>h4 {
@@ -150,9 +317,31 @@ button {
 .whoweare-container {
     background-image: url('/img/fractal.png');
     background-position: center;
-    background-size: cover;
-    background-color: #001254 ;
-    background-blend-mode: lighten;
+    position: relative;
+    padding: 40px 15px;
+    .whoweare-contents {
+        z-index: 2;
+    }
+    
+    .cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        opacity: 0.5;
+        z-index: 1;
+        background: linear-gradient(#04266f 2%, #4679e8 10% , #021d57);
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+    h4 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
 }
 
 .footer-container {
@@ -167,5 +356,15 @@ button {
         justify-content: space-between;
         flex-direction: row;
         margin-bottom: 20px;
+
+        &-social {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            img {
+                margin-right: 5px;
+            }
+        }
     }
 }

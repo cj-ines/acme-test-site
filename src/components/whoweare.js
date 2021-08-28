@@ -4,6 +4,7 @@ function Whoweare({contents}) {
     
     return (
     <div className="whoweare-container container">
+        
         <div className="whoweare-contents">
             {contents.map((content, index) => 
             <div className="whoweare">
@@ -13,6 +14,7 @@ function Whoweare({contents}) {
             </div>
             )}
         </div>
+        <div className="cover"></div>
     </div>
     )
 }

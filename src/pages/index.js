@@ -1,6 +1,7 @@
 import * as React from "react"
 import "../style.scss"
-
+import NavigationBar from "../components/navigation-bar";
+import Banner from "../components/banner";
 import Insights from "../components/insights";
 import Whoweare from "../components/WhoWeAre";
 import Events from "../components/events";
@@ -10,7 +11,19 @@ import Footer from "../components/footer";
 // styles
 const pageStyles = {
   color: "#232129",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  fontFamily: "'Open Sans', sans-serif",
+}
+
+const navigation = {
+  logoUrl: '/img/logo.png',
+  links: ['Home', 'About Us', 'Insights', 'Events', 'Contact Us']
+}
+
+const banner = {
+  title: ['ACME Wealth',  'Management Platforms'],
+  subTitle: ['Investment excellence.',
+    'Diversity of thought.',
+    'Organizational strength.']
 }
 
 const insights = [{
@@ -61,12 +74,16 @@ const IndexPage = () => {
   
 
   return (
+    <>
+    <NavigationBar navigation={navigation}></NavigationBar>
     <main style={pageStyles}>
+      <Banner banner={banner}></Banner>
       <Insights insights={insights}></Insights>
       <Whoweare contents={whoWeAre}></Whoweare>
       <Events events={events}></Events>
       <Footer phone="111-222-3333"></Footer>
     </main>
+    </>
     
   )
 }

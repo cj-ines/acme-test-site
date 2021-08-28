@@ -14,7 +14,8 @@ function Insights({insights}) {
                         className={'insights-block ' + 'insights-block-' + index }
                         style={{borderColor: insight.color}}>
                         <div className="insights-block-thumbnail">
-                        <img src={`img/insights/${index+1}.png`} alt={insights.join(',')}/>
+                            <img src={`img/insights/${index+1}.png`} alt={insights.join(',')}/>
+                            <div className="triangle"></div>
                         </div>
                         <div className="insights-block-text" style={{color: insight.color}}>
                         {insight.text.map((text, index) => 
