@@ -7,7 +7,7 @@ function NavigationBar({ navigation }) {
             <div className="navigation-bar">
                 <div className="navigation-bar-logo">
                     <StaticImage 
-                        src="../images/logo.png" width={120} layout="fixed" alt="Logo hello"
+                        src="../images/logo.png" width={80} layout="fixed" alt="Logo hello"
                         quality={95}/>
                     <div>
                         <h3>Reasearch Professional</h3>
