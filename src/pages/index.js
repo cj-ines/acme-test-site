@@ -15,7 +15,7 @@ const pageStyles = {
 }
 
 const navigation = {
-  logoUrl: '/img/logo.png',
+  logoUrl: '/logo.png',
   links: ['Home', 'About Us', 'Insights', 'Events', 'Contact Us']
 }
 
