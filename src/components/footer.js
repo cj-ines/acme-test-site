@@ -1,4 +1,5 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image"
 
 function Footer( {phone}) {
     return (
@@ -10,11 +11,11 @@ function Footer( {phone}) {
             </div>
             <div className="contacts-social">
                 Social Share
-                <div>
-                    <img src="/img/social/twitter.png" />
-                    <img src="/img/social/facebook.png" />
-                    <img src="/img/social/linkedin.png" />
-                    <img src="/img/social/social1.png" />
+                <div className="contacts-social-icons">
+                    <StaticImage  src="../images/img/social/twitter.png" alt="twitter logo" />
+                    <StaticImage  src="../images/img/social/facebook.png" alt="facebook logo"/>
+                    <StaticImage  src="../images/img/social/linkedin.png" alt="linked logo" />
+                    <StaticImage  src="../images/img/social/social1.png" alt="email logo" />
                 </div>
             </div>
            </div>

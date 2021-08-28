@@ -1,4 +1,5 @@
 import React from "react";
+import { StaticImage } from 'gatsby-plugin-image'
 
 function Insights({insights}) {
 
@@ -11,11 +12,11 @@ function Insights({insights}) {
                 <div className="insights">
                     {insights.map((insight, index)=> 
                     <div key={index} 
-                        className={'insights-block ' + 'insights-block-' + index }
+                        className="insights-block"
                         style={{borderColor: insight.color}}>
                         <div className="insights-block-thumbnail">
-                            <img src={`img/insights/${index+1}.png`} alt="hello"/>
-                            <div className="triangle"></div>
+                            {/* <img  src={insight.imageUrl} alt="hello" />  */}
+                            <div className={`insights-block-thumbnail-insight-${index}`}></div>
                         </div>
                         <div className="insights-block-text" style={{color: insight.color}}>
                         {insight.text.map((text, index) => 

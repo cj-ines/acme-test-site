@@ -29,15 +29,15 @@ const banner = {
 const insights = [{
   text: ['Global Factor', 'Investing Study'],
   color: '',
-  imageUrl: ''
+  imageUrl: '../images/img/insights/1.png'
 }, {
   text: ['2019', 'Outlook'],
   color: '#01a49c',
-  imageUrl: ''
+  imageUrl: '../images/img/insights/2.png'
 }, {
   text: ['Capital Market', 'Assumptions'],
   color: '#009bfa',
-  imageUrl: ''
+  imageUrl: '../images/img/insights/3.png'
 }];
 
 const whoWeAre = [{

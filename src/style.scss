@@ -156,7 +156,24 @@ nav{
                 bottom:  0;
                 right: 0;
                 content: "";
+            }
 
+            &-insight-0 {
+                background-image: url('images/img/insights/1.png');
+                height: 200px;
+                background-size: cover;
+            }
+
+            &-insight-2 {
+                background-image: url('images/img/insights/3.png');
+                height: 200px;
+                background-size: cover;
+            }
+
+            &-insight-1 {
+                background-image: url('images/img/insights/2.png');
+                height: 200px;
+                background-size: cover;
             }
         }
 
@@ -312,7 +329,7 @@ button {
 }
 
 .whoweare-container {
-    background-image: linear-gradient(#04266f6d 2%, #4679e88c 10% , #021d5777), url('/img/fractal.png');
+    background-image: linear-gradient(#04266f6d 2%, #4679e88c 10% , #021d5777), url('images/img/fractal.png');
     background-position: center;
     padding: 60px 15px;
 
@@ -353,8 +370,9 @@ button {
             align-items: center;
             gap: 5px;
 
-            img {
-                margin-right: 5px;
+            &-icons {
+                display: flex;
+                gap: 5px;
             }
         }
     }
