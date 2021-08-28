@@ -1,6 +1,6 @@
 import React from "react";
 
-function Whoweare({contents}) {
+function WhoWeAre({contents}) {
     
     return (
     <div className="whoweare-container container">
@@ -19,4 +19,4 @@ function Whoweare({contents}) {
     )
 }
 
-export default Whoweare;
+export default WhoWeAre;

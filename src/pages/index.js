@@ -3,7 +3,7 @@ import "../style.scss"
 import NavigationBar from "../components/navigation-bar";
 import Banner from "../components/banner";
 import Insights from "../components/insights";
-import Whoweare from "../components/WhoWeAre";
+import WhoWeAre from "../components/whoWeAre ";
 import Events from "../components/events";
 import Footer from "../components/footer";
 
@@ -79,7 +79,7 @@ const IndexPage = () => {
     <main style={pageStyles}>
       <Banner banner={banner}></Banner>
       <Insights insights={insights}></Insights>
-      <Whoweare contents={whoWeAre}></Whoweare>
+      <WhoWeAre contents={whoWeAre}></WhoWeAre>
       <Events events={events}></Events>
       <Footer phone="111-222-3333"></Footer>
     </main>
