@@ -12,8 +12,8 @@ function NavigationBar({ navigation }) {
                     </div>
                 </div>
                 <ul>
-                    { navigation.links.map(link => 
-                        <li>{ link }</li>    
+                    { navigation.links.map((link, index) => 
+                        <li key={index}>{ link }</li>    
                     )}
                 </ul>
             </div>

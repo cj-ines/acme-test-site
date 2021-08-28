@@ -5,17 +5,16 @@ function Banner({ banner }) {
         <div className="container banner-container">
             <div className="banner">
                 <div className="banner-title">
-                    { banner.title.map((title) => 
-                        <h1>{title}</h1>
+                    { banner.title.map((title, index) => 
+                        <h1 key={index}>{title}</h1>
                     )}
                 </div>
                 <div className="banner-subtitle">
-                    { banner.subTitle.map((title) => 
-                        <h3>{title}</h3>
+                    { banner.subTitle.map((title, index) => 
+                        <h3 key={index}>{title}</h3>
                     )}
                 </div>
             </div>
-            <div className="gradient"></div>
         </div>
     )
 }

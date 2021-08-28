@@ -6,8 +6,8 @@ function WhoWeAre({contents}) {
     <div className="whoweare-container container">
         
         <div className="whoweare-contents">
-            {contents.map((content, index) => 
-            <div className="whoweare">
+            { contents.map((content, index) => 
+            <div className="whoweare" key={index}>
                 <h1>{content.title}</h1>
                 <h4>{content.text}</h4>
                 <button>Contact Us</button>
