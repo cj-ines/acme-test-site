@@ -6,9 +6,10 @@ function NavigationBar({ navigation }) {
         <nav>
             <div className="navigation-bar">
                 <div className="navigation-bar-logo">
-                    <StaticImage 
-                        src="../images/logo.png" width={80} layout="fixed" alt="Logo hello"
-                        quality={95}/>
+                    <div className="image">
+                        <StaticImage  src="../images/logo.png" width={80} alt="logo"/>
+                    </div>
+                    
                     <div>
                         <h3>Reasearch Professional</h3>
                         <h2>Plaftform</h2>

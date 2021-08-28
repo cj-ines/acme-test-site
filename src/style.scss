@@ -46,6 +46,13 @@ nav{
             align-items: center;
             gap: 10px;
 
+            .image {
+                position: relative;
+                top: 8px;
+                padding: 10px;
+                background-color: white;
+            }
+
             h3,h2 {
                 margin: 0px;
                 padding-right: 20px;
@@ -57,12 +64,6 @@ nav{
             h2 {
                 color: #193989;
                 border-right: 2px solid gray;
-            }
-            img {
-                width: 100px;
-                position: relative;
-                top: 10px;
-                background: white;
             }
         }
 
