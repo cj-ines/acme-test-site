@@ -423,8 +423,15 @@ button {
             }
 
             &-menu {
-                width: 40px;
+                width: 100%;
                 display: block;
+                display: flex;
+                justify-content: space-between;
+
+                h4 {
+                    margin: 0;
+                    padding: 4px 0;
+                }
             }
         }
     }
