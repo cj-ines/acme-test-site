@@ -15,6 +15,7 @@ function Banner({ banner }) {
                     )}
                 </div>
             </div>
+            <div className="banner-gradient"></div>
         </div>
     )
 }

@@ -67,6 +67,11 @@ nav{
             }
         }
 
+        &-menu {
+            width: 40px;
+            display: none;
+        }
+
     }
 }
 
@@ -97,16 +102,18 @@ nav{
 }
 
 .container.banner-container {
-    padding: 80px 15px;
+    padding: 90px 15px;
     position: relative;
-    background: linear-gradient(125deg, #518abd 18%, transparent), url('images/img/main.png') right 20%;
-
+    background: linear-gradient(100deg, #518abd 20%, transparent) left top, url('images/img/main.png') right  20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* linear-gradient(125deg, #518abd 18%, transparent) */
 }
 
 .insights {
     display: flex;
     gap: 20px;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 
     &-list {
@@ -161,19 +168,25 @@ nav{
             &-insight-0 {
                 background-image: url('images/img/insights/1.png');
                 height: 200px;
-                background-size: cover;
+                background-size: 180%;
+                background-position-y: 45%;
+                background-position-x: 90%;
             }
 
             &-insight-2 {
                 background-image: url('images/img/insights/3.png');
                 height: 200px;
-                background-size: cover;
+                background-size: 200%;
+                background-position-x: 30%;
+                background-position-y: 90%;
             }
 
             &-insight-1 {
                 background-image: url('images/img/insights/2.png');
                 height: 200px;
-                background-size: cover;
+                background-size: 120%;
+                background-position-y: 10%;
+                background-position-x: 60%;
             }
         }
 
@@ -192,7 +205,7 @@ nav{
     
     margin: auto;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 
     &-list {
         max-width: 1024px;
@@ -375,5 +388,58 @@ button {
                 gap: 5px;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        
+        .navigation-bar {
+           
+            height: 50px;
+
+            ul {
+                display: block;
+                z-index: 6;
+                padding: 15px;
+                position: absolute;
+                top: 20px;
+                left: 0;
+                right: 0;
+                background: white;
+
+                li {
+                    padding: 10px 5px;
+                    background: #eee;
+                    margin: 5px;
+                    text-align: center;
+                    color: #707070;
+                }
+
+            }
+
+            &-logo {
+                display: none;
+            }
+
+            &-menu {
+                width: 40px;
+                display: block;
+            }
+        }
+    }
+
+    .navigation-overlay {
+        background: #000;
+        opacity: 0.8;
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        z-index: 3;
+    }
+    .banner-container {
+        background: #009bfa!important ;
     }
 }
