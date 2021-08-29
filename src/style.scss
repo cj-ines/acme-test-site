@@ -3,7 +3,7 @@
 body {
     padding:0px;
     margin: 0px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -28,7 +28,7 @@ nav{
         max-width: 1024px;
         margin: auto;
 
-        ul {
+        &-links {
             display: flex;
             justify-content: space-around;
             align-self: flex-end;
@@ -39,6 +39,7 @@ nav{
             }
         }
 
+
         &-logo {
             background-color: white;
             padding: 10px;
@@ -46,11 +47,20 @@ nav{
             align-items: center;
             gap: 10px;
 
+            &-brand {
+                strong {
+                    font-family: 'Arial Narrow', Helvetica, sans-serif;
+                    display: block;
+                    text-align: center;
+                }
+            }
+
             .image {
                 position: relative;
                 top: 8px;
                 padding: 10px;
                 background-color: white;
+                margin: auto;
             }
 
             h3,h2 {
@@ -71,6 +81,7 @@ nav{
             width: 40px;
             display: none;
         }
+
 
     }
 }
@@ -113,7 +124,7 @@ nav{
 .insights {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     &-list {
@@ -124,7 +135,7 @@ nav{
     &-block {
         padding: 15px;
         background-color: white;
-        width: 270px;
+        width: 290px;
         
         box-shadow: 1px 1px 3px #d2d2d2;
         border-bottom: 5px solid #1450d2;
@@ -132,10 +143,11 @@ nav{
         &-thumbnail {
 
             position: relative;
+            margin-bottom: 10px;
             
             img {
                 width: 100%;
-                height: 200px;
+                height: 270px;
                 margin-bottom: 10px;
             }
 
@@ -217,7 +229,7 @@ nav{
         
         color: #fff;
         padding: 15px;
-        width: 270px;
+        width: 290px;
         position: relative;
         display: inline-flex;
         flex-direction: column;
@@ -398,8 +410,7 @@ button {
            
             height: 50px;
 
-            ul {
-                display: block;
+            &-links {
                 z-index: 6;
                 padding: 15px;
                 position: absolute;
@@ -407,6 +418,13 @@ button {
                 left: 0;
                 right: 0;
                 background: white;
+                display: none;
+
+                &.--show {
+                    display: block;
+                }
+
+
 
                 li {
                     padding: 10px 5px;
@@ -419,19 +437,31 @@ button {
             }
 
             &-logo {
+
+                flex-grow: 1;
+                padding: 0px;
+
+                &-brand {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    strong {
+                        display: inline-block;
+                    }
+                }
+
+                .image {
+                    top: 0px;
+                    padding: 0px;
+                }
+            }
+
+            &-title {
                 display: none;
             }
 
             &-menu {
-                width: 100%;
+                width: 50px;
                 display: block;
-                display: flex;
-                justify-content: space-between;
-
-                h4 {
-                    margin: 0;
-                    padding: 4px 0;
-                }
             }
         }
     }

@@ -10,8 +10,7 @@ import Footer from "../components/footer";
 
 // styles
 const pageStyles = {
-  color: "#232129",
-  fontFamily: "'Open Sans', sans-serif",
+  color: "#232129"
 }
 
 const navigation = {

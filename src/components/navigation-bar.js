@@ -13,17 +13,18 @@ function NavigationBar({ navigation }) {
         <nav>
             <div className="navigation-bar">
                 <div className="navigation-bar-logo">
-                    <div className="image">
-                        <StaticImage  src="../images/logo.png" width={80} alt="logo"/>
-                    </div>
-                    
-                    <div>
+                    <div className="image navigation-bar-logo-brand">
+                        <StaticImage  src="../images/logo.png" width={50} alt="logo"/>
+                        <strong>acme<br />corporation</strong>
+                    </div>                    
+                    <div className="navigation-bar-title">
                         <h3>Reasearch Professional</h3>
                         <h2>Plaftform</h2>
                     </div>
                 </div>
-                { showMenu && 
-                    <ul>
+
+                {  
+                    <ul className={'navigation-bar-links ' + (showMenu? '--show': '')}>
                         { navigation.links.map((link, index) => 
                             <li key={index}>{ link }</li>    
                         )}
@@ -33,8 +34,7 @@ function NavigationBar({ navigation }) {
                     showMenu && <div className="navigation-overlay"></div>
                 }
                 <div className="navigation-bar-menu" onClick={toggle}>
-                    <StaticImage  src="../images/logo.png" width={80} alt="logo"/>
-                    <h4>Acme<br/>Corporation</h4>
+                    
                     { !showMenu &&
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
