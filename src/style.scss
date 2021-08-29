@@ -36,6 +36,11 @@ nav{
 
             li {
                 list-style-type: none;
+
+                a {
+                    color: #707070;
+                    text-decoration: none;
+                }
             }
         }
 
@@ -415,7 +420,7 @@ button {
                 z-index: 6;
                 padding: 15px;
                 position: absolute;
-                top: 20px;
+                top: 30px;
                 left: 0;
                 right: 0;
                 background: white;

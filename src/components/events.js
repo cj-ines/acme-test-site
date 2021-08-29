@@ -2,7 +2,7 @@ import React from 'react'
 
 function Events({ events }) {
     return (
-        <div className="container container-events">
+        <div className="container container-events" id="events_section">
             <div className="events-list">
                 <h1>Upcoming Events</h1>
                 <h4>This needs a great tagline, but I’ll fill it in later</h4>

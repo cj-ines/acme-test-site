@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 function Footer( {phone}) {
     return (
-       <footer className="container footer-container">
+       <footer className="container footer-container" id="contact_us_section">
            <div className="contacts">
             <div>
             Call us at { phone }<br></br>

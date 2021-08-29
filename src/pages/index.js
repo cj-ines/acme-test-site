@@ -15,7 +15,13 @@ const pageStyles = {
 
 const navigation = {
   logoUrl: '/logo.png',
-  links: ['Home', 'About Us', 'Insights', 'Events', 'Contact Us']
+  links: [
+    { name: 'Home', url: '/'},
+    { name: 'About Us', url: '#about_us_section' }, 
+    { name: 'Insights', url: '#insights_section'}, 
+    { name: 'Events', url: '#events_section'}, 
+    { name: 'Contact Us', url: '#contact_us_section' }
+  ]
 }
 
 const banner = {

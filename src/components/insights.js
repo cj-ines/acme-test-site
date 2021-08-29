@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 function Insights({insights}) {
 
     return (
-        <div className="container-insights container">
+        <div className="container-insights container" id="insights_section">
             <div className="insights-list">
                 <h1>ACME Insights</h1>
                 <h4>How are factors being used around the world?</h4>

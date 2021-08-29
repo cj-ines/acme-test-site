@@ -26,7 +26,7 @@ function NavigationBar({ navigation }) {
                 {  
                     <ul className={'navigation-bar-links ' + (showMenu? '--show': '')}>
                         { navigation.links.map((link, index) => 
-                            <li key={index}>{ link }</li>    
+                            <li key={index}><a href={link.url}>{ link.name }</a></li>    
                         )}
                     </ul>
                 }
