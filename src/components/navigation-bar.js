@@ -26,12 +26,12 @@ function NavigationBar({ navigation }) {
                 {  
                     <ul className={'navigation-bar-links ' + (showMenu? '--show': '')}>
                         { navigation.links.map((link, index) => 
-                            <li key={index}><a href={link.url}>{ link.name }</a></li>    
+                            <li key={index}><a href={link.url} onClick={()=> { setShowMenu(false)}}>{ link.name }</a ></li>    
                         )}
                     </ul>
                 }
                 {
-                    showMenu && <div className="navigation-overlay"></div>
+                    showMenu && <div className="navigation-overlay" onClick={toggle} ></div>
                 }
                 <div className="navigation-bar-menu" onClick={toggle}>
                     
