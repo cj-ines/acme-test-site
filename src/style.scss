@@ -82,7 +82,9 @@ nav{
                 border-right: 2px solid gray;
             }
         }
-
+        &-title {
+            text-align: left;
+        }
         &-menu {
             width: 40px;
             display: none;
