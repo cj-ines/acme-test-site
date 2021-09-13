@@ -132,8 +132,10 @@ nav{
 .insights {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    //grid-template-columns: repeat(3, 250);
     gap: 20px;
     justify-content: center;
+
 
     &-list {
         max-width: 1024px;
@@ -431,7 +433,23 @@ button {
     }
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 425px) {
+    .insights, .events {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(280px, 1fr));
+        gap: 10px;
+        justify-content: stretch;
+        scroll-snap-type:x proximity;
+        overflow-x: auto;
+
+        &-block {
+            scroll-snap-align: start;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
     nav {
         
         .navigation-bar {
